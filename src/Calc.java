@@ -29,10 +29,8 @@ public class Calc {
     addButton(calc, "8", 130, 260, 50, 50, label);
     addButton(calc, "9", 230, 260, 50, 50, label);
     
-//    //Text window initialization
-//    JTextField panel = new JTextField();
-//    calc.add(panel);
-//    panel.setBounds(30, 50, 300, 50);
+    //Clear button initialization
+    
     
     calc.setVisible(true);
     calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Allows program to close when X'd out
@@ -44,6 +42,16 @@ public class Calc {
     JButton button = new JButton(key);
     calc.add(button);
     button.setBounds(x, y, width, height);
+    
+    /*if (key.equals("C")) {
+      
+      button.addActionListener(e -> {
+      
+      
+      
+      });
+      
+    }*/
     
     button.addActionListener(e -> {
       
