@@ -30,7 +30,13 @@ public class Calc {
     addButton(calc, "9", 230, 260, 50, 50, label);
     
     //Clear button initialization
+    addButton(calc, "C", 30, 180, 250, 50, label);
     
+    //Operator sign initialization
+    addButton(calc, "+", 330, 420, 50, 50, label);
+    addButton(calc, "-", 330, 340, 50, 50, label);
+    addButton(calc, "*", 330, 260, 50, 50, label);
+    addButton(calc, "/", 330, 180, 50, 50, label);
     
     calc.setVisible(true);
     calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Allows program to close when X'd out
@@ -43,23 +49,21 @@ public class Calc {
     calc.add(button);
     button.setBounds(x, y, width, height);
     
-    /*if (key.equals("C")) {
+    if (key.equals("C")) {
+      
+      button.addActionListener(e -> {label.setText("");});
+      
+    } else {
       
       button.addActionListener(e -> {
-      
-      
-      
+        
+        String temp = label.getText();
+        temp += key;
+        label.setText(temp);
+        
       });
       
-    }*/
-    
-    button.addActionListener(e -> {
-      
-      String temp = label.getText();
-      temp += key;
-      label.setText(temp);
-      
-    });
+    }
     
   }
   
